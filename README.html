@@ -352,11 +352,11 @@ display: none;
 </div>
 
 
-<div id="setlist-variety" class="section level1">
-<h1>Setlist Variety</h1>
-<p>Greatest Hits Versus Deep Cuts: Exploring Variety in Set-lists Across
-Artists and Musical Genres.</p>
-<p>The work is to be presented at the <a href="https://2024.computational-humanities-research.org/">CHR 2024
+<div id="greatest-hits-versus-deep-cuts-exploring-variety-in-set-lists-across-artists-and-musical-genres." class="section level1">
+<h1>Greatest Hits Versus Deep Cuts: Exploring Variety in Set-lists
+Across Artists and Musical Genres.</h1>
+<p>This is the github repository to to accompany the Research Paper work
+to be presented at the <a href="https://2024.computational-humanities-research.org/">CHR 2024
 Conference</a>, for full details and discussions see the <a href="https://ceur-ws.org/Vol-3834/paper102.pdf">Paper Here</a></p>
 <div id="interactive-interface" class="section level2">
 <h2>Interactive Interface</h2>
@@ -392,11 +392,26 @@ interesting properties</p>
 </div>
 <div id="single-tour-analysis" class="section level2">
 <h2>Single Tour Analysis</h2>
-<p>From such notions we can explore analysis of a Single tour</p>
+<p>We can utilise such notions to explore the data of a Tour for an
+Artist. For example, below is analysis of Bruce Springsteen’s 2003 Tour
+and his Wrecking Ball Tour. We can see interesting differences between
+these two tours.</p>
 </div>
 <div id="whole-artist-career-analysis" class="section level2">
 <h2>Whole Artist Career Analysis</h2>
-<p>From such notions we can explore an artist’s career.</p>
+<p>From such analysis of a tour, we can calculate the number of a tour’s
+songs that are in its shelf as a ratio of the total number of songs
+played on the tour. Similarly, we can calculate the number of a tour’s
+songs that are in its tail as a ratio of the total number of songs
+played on the tour. For example, taking the illustrative example from
+above, where there is a total of 16 songs, we can calculate that the
+shelf contains x/31 songs = xx<span class="math inline">\(%\)</span> of
+the songs, and the tail contains y/31 songs = yy<span class="math inline">\(%\)</span> of the songs.In this way a pair of
+values can be calculated for a tour.</p>
+<p>[IMAGE OF THESE CALCULATIONS]</p>
+<p>Such calculations can be done for each of an artist’s tours, from
+which exploration of the variety over an artist’s career can be
+explored.</p>
 </div>
 <div id="artist-comparisons" class="section level2">
 <h2>Artist Comparisons</h2>
@@ -427,6 +442,25 @@ artists and thousands of tours.</p>
 </tr>
 </tbody>
 </table>
+<p>```{r} # insert the raw data artist data csv file as a markdown
+table</p>
+</div>
+</div>
+<div id="load-necessary-libraries" class="section level1">
+<h1>Load necessary libraries</h1>
+<p>library(knitr)</p>
+</div>
+<div id="read-your-csv-file" class="section level1">
+<h1>Read your CSV file</h1>
+</div>
+<div id="replace-your_file.csv-with-the-actual-file-path" class="section level1">
+<h1>Replace ‘your_file.csv’ with the actual file path</h1>
+<p>data &lt;- read.csv(“your_file.csv”)</p>
+</div>
+<div id="display-as-a-markdown-table" class="section level1">
+<h1>Display as a markdown table</h1>
+<p>kable(data, format = “markdown”)</p>
+<p>```</p>
 <p>Threshold Values can be set as below:</p>
 <table>
 <thead>
@@ -441,7 +475,7 @@ artists and thousands of tours.</p>
 <td align="right">5</td>
 </tr>
 <tr class="even">
-<td>Artist Minimum Total No. of shows </td>
+<td>Artist Minimum Total No. of shows</td>
 <td align="right">200</td>
 </tr>
 <tr class="odd">
@@ -623,7 +657,6 @@ artists and thousands of tours.</p>
 <li>You Me at Six</li>
 <li>ZZ T</li>
 </ol>
-</div>
 </div>
 
 

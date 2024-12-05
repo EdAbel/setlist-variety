@@ -1,12 +1,10 @@
-# Setlist Variety
+# Greatest Hits Versus Deep Cuts: Exploring Variety in Set-lists Across Artists and Musical Genres.
 
-Greatest Hits Versus Deep Cuts: Exploring Variety in Set-lists Across Artists and Musical Genres.
-
-The work is to be presented at the [CHR 2024 Conference](https://2024.computational-humanities-research.org/), for full details and discussions see the [Paper Here](https://ceur-ws.org/Vol-3834/paper102.pdf)
+This is the github repository to accompany the **"Greatest Hits Versus Deep Cuts: Exploring Variety in Set-lists Across Artists and Musical Genres"** Research Paper work to be presented at the [CHR 2024 Conference](https://2024.computational-humanities-research.org/), for full details and discussions see the [Paper Here](https://ceur-ws.org/Vol-3834/paper102.pdf)
 
 ## Interactive Interface
 
-We are currently working upon an interactive interface of the paper's analysis, to explore the data for yourself [Try out the interface Here](https://edabel.shinyapps.io/setlist-variety/). In the interface you can explore any of the different artist's in the data set and see how your favourite artists compare with respect to setlist variety.
+We are currently working upon an interactive interface of the paper's analysis, to explore the data for yourself, try out the interface [Here](https://edabel.shinyapps.io/setlist-variety/). In the interface you can explore any of the different artist's in the data set and see how your favourite artists compare with respect to setlist variety.
 
 ![](images/clipboard-1046187914.png)
 
@@ -18,31 +16,51 @@ Given the total number of shows for a tour, we can calculate ratio versions of t
 
 ![](images/clipboard-82620632.png)
 
-From such a visualisation of a tour's data, we can see specific interesting properties
+From such a visualisation of a tour's data, we can see specific interesting properties:
 
-1.  Shelf
+1.  Shelf: A set of songs making up a Shelf like shape. Denoting songs that areplayed at most of the tour's shows
 
-2.  Tail
+2.  Tail: Set of songs making up a Tail like shape. Denoting songs that are played only rarely on the tour
 
-3.  100'%ers
+3.  100'%ers: Songs that are played at 100% of the tour’s shows. Denoting songs that are played at 100% of the tour's shows
 
-4.  Uniques
+4.  Uniques: Set of songs that are only played once on the whole tour. Denoting songs are played at only 1 of the tour’s shows
 
-5.  Covers
+5.  Covers: Songs that are cover songs (with respect to the artist) and identify those that are part of the Shelf or part of the Tail
 
 ![](images/clipboard-856578018.png)
 
 ## Single Tour Analysis
 
-From such notions we can explore analysis of a Single tour
+We can utilise such notions to explore the data of a Tour for an Artist. For example, below is analysis of Bruce Springsteen's 2003 Tour and his Wrecking Ball Tour. We can see interesting differences between these two tours.
+
+![](images/clipboard-2202267736.png)
 
 ## Whole Artist Career Analysis
 
-From such notions we can explore an artist's career.
+From such analysis of a tour, we can calculate the number of a tour's songs that are in its shelf as a ratio of the total number of songs played on the tour. Similarly, we can calculate the number of a tour's songs that are in its tail as a ratio of the total number of songs played on the tour. For example, taking the illustrative example from above, where there is a total of 16 songs, we can calculate that the shelf contains 5/16 songs = 31% of the songs, and the tail contains 6/16 songs = 38% of the songs.In this way a pair of values can be calculated for a tour.
+
+![](images/clipboard-3883019822.png)
+
+Such calculations can be done for each of an artist's tours, from which exploration of the variety over an artist's career can be explored. A whole artist's career can be visualised and compared to other artists, such as Bruce Springsteen and Iron Maiden as show below. Within such plots the amount of each shelf and tail that is also and 100'ers uniques respectively can additional be shown on such plots.
+
+![](images/clipboard-3522574859.png)
 
 ## Artist Comparisons
 
 This can be further extended to compare variety between a whole set of artists.
+
+Given Tour Level Shelf and Tail Values for every tour for an artist. Considering each tour equally, a Mean Shelf Value for an artist can be calculated A Mean Tail Value for an artist can be calculated. In this way, a pair of values for an artist can be calculated:
+
+1.  Mean Shelf
+
+2.  Mean Tail
+
+Each between 0 and 100.
+
+Then such values for each artist can be plotted within a 2Dimensional space of Mean Shelf and Mean Tail values as shown below.
+
+![](images/clipboard-330560500.png)
 
 ## Data
 
@@ -55,15 +73,30 @@ The set of artists in the initial dataset consists of hundreds of artists and th
 | Number of Tour songs:         |   155,231 |
 | Overall Number of song plays: | 3,117,935 |
 
+```{r}
+# insert the raw data artist data csv file as a markdown table
+
+# Load necessary libraries
+library(knitr)
+
+# Read your CSV file
+# Replace 'your_file.csv' with the actual file path
+data <- read.csv("your_file.csv")
+
+# Display as a markdown table
+kable(data, format = "markdown")
+
+```
+
 Threshold Values can be set as below:
 
-| Threshold Name                     | Value |
-|------------------------------------|------:|
-| Artist Minimum No. of Tours        |     5 |
-| Artist Minimum Total No. of shows  |   200 |
-| Tour Minimum No. of shows          |    20 |
-| Tour Minimum No. of songs          |    10 |
-| Tour Minimum Average Show Length   |    10 |
+| Threshold Name                    | Value |
+|-----------------------------------|------:|
+| Artist Minimum No. of Tours       |     5 |
+| Artist Minimum Total No. of shows |   200 |
+| Tour Minimum No. of shows         |    20 |
+| Tour Minimum No. of songs         |    10 |
+| Tour Minimum Average Show Length  |    10 |
 
 After threshold values data have set of artists as below
 
