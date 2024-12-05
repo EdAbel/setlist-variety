@@ -73,22 +73,8 @@ The set of artists in the initial dataset consists of hundreds of artists and th
 | Number of Tour songs:         |   155,231 |
 | Overall Number of song plays: | 3,117,935 |
 
-```{r}
-# insert the raw data artist data csv file as a markdown table
 
-# Load necessary libraries
-library(knitr)
-
-# Read your CSV file
-# Replace 'your_file.csv' with the actual file path
-data <- read.csv("your_file.csv")
-
-# Display as a markdown table
-kable(data, format = "markdown")
-
-```
-
-Threshold Values can be set as below:
+Post data acquisition of this raw data, the data was cleaned and processed to remove any tours that did not meet certain threshold values. The set of thresholds considered is shown below along with the values that were employed within the paper. The values are parametrised so can be altered:
 
 | Threshold Name                    | Value |
 |-----------------------------------|------:|
@@ -98,7 +84,7 @@ Threshold Values can be set as below:
 | Tour Minimum No. of songs         |    10 |
 | Tour Minimum Average Show Length  |    10 |
 
-After threshold values data have set of artists as below
+After the application of these thresholds to the data the set of artists then utilised within the analysis in the paper are listed below:
 
 1.  ACDC
 2.  Aerosmith
