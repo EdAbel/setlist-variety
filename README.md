@@ -62,6 +62,24 @@ Then such values for each artist can be plotted within a 2Dimensional space of M
 
 ![](images/clipboard-330560500.png)
 
+Within such a plot, artists can be compared and contrasted with respect to their setlist variety within these 2Dimensions, and artists that have larger/smaller values in both dimensions (dominating in a multi-objective Pareto front sense) compared to other artists can be identified.
+
+Finally, a single value of Variety for an artist can be calculated as their Mean Tail value minus their Mean Shelf value. Such a value is essentially a measure of how far away the artist is from the red line the plot above. This value can be used create an overall ranking of artists in terms of their setlist variety.
+
+## Variety Metric Correlation Analysis
+
+To explore the robustness of our single measure of Variety, correlation analysis between the single measure of variety with various artist properties, such as number of tours and average number of songs in shows, was performed. The table below highlight our correlation analysis found very weak correlation observed each time between our measure of avareity and another property.
+
+| Property Name                    | Description                                                                                                | Correlation |
+|------------------|--------------------------------------|---------------:|
+| Number of Tours                  | The total number of tours                                                                                  |     -0.1786 |
+| Total Number of Shows            | The total number of shows from all tours                                                                   |     -0.0725 |
+| Length of Tours                  | The average number of shows per tour                                                                       |      0.0908 |
+| Average Show Length              | The average show length in terms of number of songs                                                        |      0.0952 |
+| H-Index                          | The career H-Index - where an artist has a h-index of h if they have played h songs at least h times each |       0.063 |
+| Artist Start Date (Groups Only)  | The formation incarnation date of the artist                                                               |      0.0933 |
+| Amount Time Period (Groups Only) | The amount time active in terms of years                                                                   |     -0.0952 |
+
 ## Data
 
 The set of artists in the initial dataset consists of hundreds of artists and thousands of tours.
@@ -73,8 +91,7 @@ The set of artists in the initial dataset consists of hundreds of artists and th
 | Number of Tour songs:         |   155,231 |
 | Overall Number of song plays: | 3,117,935 |
 
-
-Post data acquisition of this raw data, the data was cleaned and processed to remove any tours that did not meet certain threshold values. The set of thresholds considered is shown below along with the values that were employed within the paper. The values are parametrised so can be altered:
+Post data acquisition of this raw data, the data was cleaned and pre-processed to remove any tours that did not meet certain threshold values. The set of thresholds considered is shown below along with the values that were employed within the paper. The values are parametrised so can be altered:
 
 | Threshold Name                    | Value |
 |-----------------------------------|------:|
@@ -94,7 +111,7 @@ After the application of these thresholds to the data the set of artists then ut
 6.  Arctic Monkeys
 7.  Avenged Sevenfold
 8.  Beck
-9.  BeyoncÃ©
+9.  Beyonce
 10. Biffy Clyro
 11. Billy Joel
 12. Black Sabbath
@@ -247,4 +264,4 @@ After the application of these thresholds to the data the set of artists then ut
 159. Yes
 160. Yo La Tengo
 161. You Me at Six
-162. ZZ T
+162. ZZ Top
