@@ -1,10 +1,12 @@
 # Greatest Hits Versus Deep Cuts: Exploring Variety in Set-lists Across Artists and Musical Genres.
 
-This is the github repository to accompany the **"Greatest Hits Versus Deep Cuts: Exploring Variety in Set-lists Across Artists and Musical Genres"** Research Paper work to be presented at the [CHR 2024 Conference](https://2024.computational-humanities-research.org/), for full details and discussions see the [Paper Here](https://ceur-ws.org/Vol-3834/paper102.pdf)
+This is the github repository to accompany the **"Greatest Hits Versus Deep Cuts: Exploring Variety in Set-lists Across Artists and Musical Genres"** Research Paper to be presented at the [CHR 2024 Conference](https://2024.computational-humanities-research.org/). For full details and discussions of metrics and analysis, see the [Paper Here](https://ceur-ws.org/Vol-3834/paper102.pdf).
+
+For comments, corrections, or suggestions and please [Contact Us](mailto:abel@sdu.dk)
 
 ## Interactive Interface
 
-We are currently working upon an interactive interface of the paper's analysis, to explore the data for yourself, try out the interface [Here](https://edabel.shinyapps.io/setlist-variety/). In the interface you can explore any of the different artist's in the data set and see how your favourite artists compare with respect to setlist variety.
+We are currently working on an interactive web app of the paper's analysis. To explore the data for yourself, try out the web app [Here](https://edabel.shinyapps.io/setlist-variety/). In the app you can explore any of the artist's in the initial data set and see how your favourite artists compare with respect to setlist variety.
 
 ![](images/clipboard-1046187914.png)
 
@@ -32,7 +34,7 @@ From such a visualisation of a tour's data, we can see specific interesting prop
 
 ## Single Tour Analysis
 
-We can utilise such notions to explore the data of a Tour for an Artist. For example, below is analysis of Bruce Springsteen's 2003 Tour and his Wrecking Ball Tour. We can see interesting differences between these two tours.
+We can utilise such notions to explore the data of a Tour for an Artist. For example, below is analysis of Bruce Springsteen's 2003 Tour, on the left, and his Wrecking Ball Tour., on the right We can see interesting differences between these two tours, in terms of properties such as the size and prominence of a shelf.
 
 ![](images/clipboard-2202267736.png)
 
@@ -70,15 +72,15 @@ Finally, a single value of Variety for an artist can be calculated as their Mean
 
 To explore the robustness of our single measure of Variety, correlation analysis between the single measure of variety with various artist properties, such as number of tours and average number of songs in shows, was performed. The table below highlight our correlation analysis found very weak correlation observed each time between our measure of avareity and another property.
 
-| Property Name                    | Description                                                                                                | Correlation |
-|------------------|--------------------------------------|---------------:|
-| Number of Tours                  | The total number of tours                                                                                  |     -0.1786 |
-| Total Number of Shows            | The total number of shows from all tours                                                                   |     -0.0725 |
-| Length of Tours                  | The average number of shows per tour                                                                       |      0.0908 |
-| Average Show Length              | The average show length in terms of number of songs                                                        |      0.0952 |
+| Property Name                    | Description                                                                                               | Correlation |
+|---------------------|------------------------------------|---------------:|
+| Number of Tours                  | The total number of tours                                                                                 |     -0.1786 |
+| Total Number of Shows            | The total number of shows from all tours                                                                  |     -0.0725 |
+| Length of Tours                  | The average number of shows per tour                                                                      |      0.0908 |
+| Average Show Length              | The average show length in terms of number of songs                                                       |      0.0952 |
 | H-Index                          | The career H-Index - where an artist has a h-index of h if they have played h songs at least h times each |       0.063 |
-| Artist Start Date (Groups Only)  | The formation incarnation date of the artist                                                               |      0.0933 |
-| Amount Time Period (Groups Only) | The amount time active in terms of years                                                                   |     -0.0952 |
+| Artist Start Date (Groups Only)  | The formation incarnation date of the artist                                                              |      0.0933 |
+| Amount Time Period (Groups Only) | The amount time active in terms of years                                                                  |     -0.0952 |
 
 ## Data
 
@@ -121,7 +123,7 @@ After the application of these thresholds to the data the set of artists then ut
 16. Britney Spears
 17. Bruce Springsteen
 18. Bullet for My Valentine
-19. CÃ©line Dion
+19. Celine Dion
 20. Cheap Trick
 21. Cher
 22. Children of Bodom
@@ -188,8 +190,8 @@ After the application of these thresholds to the data the set of artists then ut
 83. Mastodon
 84. Megadeth
 85. Metallica
-86. MÃ¶tley CrÃ¼e
-87. MotÃ¶rhead
+86. Motley Crue
+87. Motorhead
 88. Muse
 89. Neil Young
 90. New Found Glory
@@ -214,7 +216,7 @@ After the application of these thresholds to the data the set of artists then ut
 109. Primus
 110. Queen
 111. Queens of the Stone Age
-112. QueensrÃ¿che
+112. Queensryche
 113. R.E.M.
 114. Radiohead
 115. Rammstein
@@ -224,7 +226,7 @@ After the application of these thresholds to the data the set of artists then ut
 119. Roger Waters
 120. Rush
 121. Scorpions
-122. Sigur RÃ³s
+122. Sigur Ros
 123. Slayer
 124. Slipknot
 125. Soundgarden
